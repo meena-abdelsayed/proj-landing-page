@@ -4,7 +4,7 @@
 
 - STEP 0
 
-Cloning starter code for Landing Page project from GitHub.
+ - Cloning starter code for Landing Page project from GitHub.
 
 - STEP 1
 
@@ -19,6 +19,12 @@ STEP 3
 
  - Make Section in viewport standout by adding to it 'active' class
  
+STEP 4
+
+ - Add active class to Navbar list items when linked section is in viewport
+ - Modifying both js and css 
+
+
 
 
 

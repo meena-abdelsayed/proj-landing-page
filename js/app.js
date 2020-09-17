@@ -23,8 +23,22 @@ const sectionTitle = document.querySelectorAll('h2'); // all subheadings
 /**
  * End Global Variables
  * Start Helper Functions
- *
+ * Function for adding active class to Section and to Navbar list items 
+ * when in viewport
 */
+const backupFun = enteries => {
+    enteries.forEach(entery => {
+        if (entery.isIntersecting) {
+            entery.target.classList.add('your-active-class');
+            let id = entery.target.getAttribute('id');
+            document.querySelector(`[href='#${id}']`).classList.add('active');
+        } else {
+            entery.target.classList.remove('your-active-class');
+            let id = entery.target.getAttribute('id');
+            document.querySelector(`[href='#${id}']`).classList.remove('active');
+        }
+    })
+}
 /**
  * End Helper Functions
  * Begin Main Functions
@@ -45,22 +59,12 @@ for (let i = 0; i < sections.length; i++) {
 }
 
 // Add class 'active' to section when near top of viewport
-const backupFun = enteries => {
-    enteries.forEach(entery => {
-        if (entery.isIntersecting) {
-            entery.target.classList.add('your-active-class');
-        } else {
-            entery.target.classList.remove('your-active-class');
-        }
-    })
-}
 const observer = new IntersectionObserver(backupFun, {
     threshold: 0.55
 })
 sections.forEach(element => {
     observer.observe(element);
 })
-
 // Scroll to anchor ID using scrollTO event
 
 
