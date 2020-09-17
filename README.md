@@ -27,6 +27,10 @@
 - STEP 5
 
  - Adding Back to top Button (HTML, CSS, Js)
+ 
+- STEP 6
+
+ - Hide Navbar when scrolling
 
 
 

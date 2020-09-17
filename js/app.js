@@ -21,6 +21,7 @@ const navbarList = document.getElementById('navbar__list'); // unordered list it
 const sections = document.querySelectorAll('section'); // all existing sections
 const sectionTitle = document.querySelectorAll('h2'); // all subheadings
 const backToTop = document.querySelector('button'); // Back to top button
+const header = document.querySelector('.page__header');
 /**
  * End Global Variables
  * Start Helper Functions
@@ -87,6 +88,14 @@ backToTop.addEventListener('click', () => {
         top: 0,
         left: 0
     })
+})
+// Hide Navbar when scrolling
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset >= 60) {
+        header.style.top = '-52px';
+    } else if (window.pageYOffset < 60) {
+        header.style.top = '0';
+    }
 })
 // Build menu
 
