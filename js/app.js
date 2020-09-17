@@ -17,12 +17,12 @@
  * Define Global Variables
  * 
 */
-
-
+const navbarList = document.getElementById('#navbar__list'); // unordered list items
+const sections = document.querySelectorAll('section'); // all existing sections
 /**
  * End Global Variables
  * Start Helper Functions
- * 
+ *
 */
 
 
@@ -30,7 +30,7 @@
 /**
  * End Helper Functions
  * Begin Main Functions
- * 
+ *
 */
 
 // build the nav
@@ -45,7 +45,7 @@
 /**
  * End Main Functions
  * Begin Events
- * 
+ *
 */
 
 // Build menu 
