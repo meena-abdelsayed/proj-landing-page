@@ -19,22 +19,19 @@
 */
 const navbarList = document.getElementById('navbar__list'); // unordered list items
 const sections = document.querySelectorAll('section'); // all existing sections
-const sectionTitle = document.querySelectorAll('h2');
+const sectionTitle = document.querySelectorAll('h2'); // all subheadings
 /**
  * End Global Variables
  * Start Helper Functions
  *
 */
-
-
-
 /**
  * End Helper Functions
  * Begin Main Functions
  *
 */
 
-// build the nav
+// build the nav 
 for (let i = 0; i < sections.length; i++) {
     const listItems = document.createElement('li');
     const anchorElem = document.createElement('a');
@@ -48,7 +45,21 @@ for (let i = 0; i < sections.length; i++) {
 }
 
 // Add class 'active' to section when near top of viewport
-
+const backupFun = enteries => {
+    enteries.forEach(entery => {
+        if (entery.isIntersecting) {
+            entery.target.classList.add('your-active-class');
+        } else {
+            entery.target.classList.remove('your-active-class');
+        }
+    })
+}
+const observer = new IntersectionObserver(backupFun, {
+    threshold: 0.55
+})
+sections.forEach(element => {
+    observer.observe(element);
+})
 
 // Scroll to anchor ID using scrollTO event
 

@@ -6,7 +6,19 @@
 
 Cloning starter code for Landing Page project from GitHub.
 
+- STEP 1
 
+ - linking app.js file
+ - defining global variables (Sections, Navbar items and Headings)
+ 
+- STEP 2
+
+ - Adding Navbar list items dynamically with for loop
+ 
+STEP 3
+
+ - Make Section in viewport standout by adding to it 'active' class
+ 
 
 
 
