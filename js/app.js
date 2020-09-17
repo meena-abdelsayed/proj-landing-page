@@ -20,6 +20,7 @@
 const navbarList = document.getElementById('navbar__list'); // unordered list items
 const sections = document.querySelectorAll('section'); // all existing sections
 const sectionTitle = document.querySelectorAll('h2'); // all subheadings
+const backToTop = document.querySelector('button'); // Back to top button
 /**
  * End Global Variables
  * Start Helper Functions
@@ -71,10 +72,23 @@ sections.forEach(element => {
 /**
  * End Main Functions
  * Begin Events
- *
+ * Displaying Back to top button when page Y offset is 600
 */
-
-// Build menu 
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset >= 600) {
+        backToTop.style.display = 'block';
+    } else if (window.pageYOffset < 600) {
+        backToTop.style.display = 'none';
+    }
+})
+// Scroll to top when clicking the button
+backToTop.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        left: 0
+    })
+})
+// Build menu
 
 // Scroll to section on link click
 

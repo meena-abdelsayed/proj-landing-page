@@ -15,14 +15,18 @@
 
  - Adding Navbar list items dynamically with for loop
  
-STEP 3
+- STEP 3
 
  - Make Section in viewport standout by adding to it 'active' class
  
-STEP 4
+- STEP 4
 
  - Add active class to Navbar list items when linked section is in viewport
  - Modifying both js and css 
+ 
+- STEP 5
+
+ - Adding Back to top Button (HTML, CSS, Js)
 
 
 
