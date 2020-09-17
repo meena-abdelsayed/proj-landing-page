@@ -92,9 +92,15 @@ backToTop.addEventListener('click', () => {
 // Hide Navbar when scrolling
 window.addEventListener('scroll', () => {
     if (window.pageYOffset >= 60) {
-        header.style.top = '-52px';
+        header.style.opacity = '0';
     } else if (window.pageYOffset < 60) {
-        header.style.top = '0';
+        header.style.opacity = '1';
+    }
+})
+
+header.addEventListener('mouseover', () => {
+    if (window.pageYOffset >= 60) {
+        header.style.opacity = '1';
     }
 })
 // Build menu
