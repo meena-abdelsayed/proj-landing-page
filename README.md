@@ -31,6 +31,10 @@
 - STEP 6
 
  - Hide Navbar when scrolling
+ 
+- STEP 7
+
+ - Smooth Scrolling
 
 
 

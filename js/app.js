@@ -32,12 +32,12 @@ const backupFun = enteries => {
     enteries.forEach(entery => {
         if (entery.isIntersecting) {
             entery.target.classList.add('your-active-class');
-            let id = entery.target.getAttribute('id');
-            document.querySelector(`[href='#${id}']`).classList.add('active');
+            let sectionId = entery.target.getAttribute('id');
+            document.querySelector(`[href='#${sectionId}']`).classList.add('active');
         } else {
             entery.target.classList.remove('your-active-class');
-            let id = entery.target.getAttribute('id');
-            document.querySelector(`[href='#${id}']`).classList.remove('active');
+            let sectionId = entery.target.getAttribute('id');
+            document.querySelector(`[href='#${sectionId}']`).classList.remove('active');
         }
     })
 }
@@ -59,6 +59,7 @@ for (let i = 0; i < sections.length; i++) {
     listItems.appendChild(anchorElem);
     navbarList.appendChild(listItems);
 }
+
 
 // Add class 'active' to section when near top of viewport
 const observer = new IntersectionObserver(backupFun, {
@@ -86,7 +87,8 @@ window.addEventListener('scroll', () => {
 backToTop.addEventListener('click', () => {
     window.scrollTo({
         top: 0,
-        left: 0
+        left: 0,
+        behavior: "smooth"
     })
 })
 // Hide Navbar when scrolling
@@ -106,6 +108,15 @@ header.addEventListener('mouseover', () => {
 // Build menu
 
 // Scroll to section on link click
+const anchors = document.querySelectorAll('.menu__link');
+for (anchor of anchors) {
+    anchor.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(`[data-nav="${e.target.textContent}"]`).scrollIntoView({
+            behavior: "smooth",
+        })
+    })
+}
 
 // Set sections as active
 
