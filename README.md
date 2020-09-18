@@ -35,6 +35,10 @@
 - STEP 7
 
  - Smooth Scrolling
+ 
+- STEP 8
+
+ - Updating content
 
 
 
