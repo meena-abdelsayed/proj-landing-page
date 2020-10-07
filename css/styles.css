@@ -52,6 +52,10 @@ h1 {
         font-size: 7em;
         margin: 2em 4rem 1em;
     }
+
+    img {
+        width: 200px;
+    }
 }
 
 h2 {
@@ -64,11 +68,17 @@ h2 {
 p {
     line-height: 1.6em;
     color: #eee;
+    text-align: left;
 }
 
 /* ---- Layout Rules ---- */
 main {
     margin: 10vh 1em 10vh;
+}
+
+ul {
+    line-height: 2em;
+    text-align: left;
 }
 
 .main-hero {
